@@ -1,0 +1,689 @@
+```css
+/* =====================================
+   GENERAL SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f9f9;
+    color: #333;
+}
+
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+nav {
+    background-color: #2e7d32;
+
+    padding: 15px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    animation: slideDown 0.8s ease;
+}
+    padding: 15px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    animation: slideDown 0.8s ease;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.logo span {
+    color: #ffd166;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover span {
+    color: white;
+}
+
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav ul li a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+
+/* Animated underline */
+
+nav ul li a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background-color: #ffd166;
+
+    left: 0;
+
+    bottom: -5px;
+
+    transition: width 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    color: #ffd166;
+}
+
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* =====================================
+   HOME SECTION
+===================================== */
+
+.home {
+    min-height: 90vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+.home-content {
+    max-width: 800px;
+
+    padding: 30px;
+
+    animation: fadeUp 1.2s ease;
+}
+
+
+.home h1 {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: fadeDown 1s ease;
+}
+
+
+.home p {
+    font-size: 20px;
+
+    margin-bottom: 25px;
+
+    animation: fadeUp 1.3s ease;
+}
+
+
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.btn {
+    display: inline-block;
+
+    background-color: #ffd166;
+
+    color: #333;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: fadeUp 1.5s ease;
+}
+
+
+.btn:hover {
+    background-color: white;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.btn:active {
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================
+   GENERAL SECTIONS
+===================================== */
+
+section {
+    padding: 70px 8%;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    animation: fadeUp 1s ease;
+}
+
+
+.section-title h2 {
+    font-size: 35px;
+
+    color: #006d77;
+
+    margin-bottom: 10px;
+}
+
+
+.section-title p {
+    color: #666;
+}
+
+
+
+/* =====================================
+   TOURIST SPOTS
+===================================== */
+
+.spots {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+
+.card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: fadeUp 0.8s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+.card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+/* Zoom image when card is hovered */
+
+.card:hover img {
+    transform: scale(1.08);
+}
+
+
+.card-content {
+    padding: 20px;
+}
+
+
+.card-content h3 {
+    color: #006d77;
+
+    margin-bottom: 10px;
+
+    transition: color 0.3s ease;
+}
+
+
+.card:hover .card-content h3 {
+    color: #e29578;
+}
+
+
+.card-content p {
+    color: #555;
+}
+
+
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+.about {
+    background-color: white;
+}
+
+
+.about-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+.about-image {
+    flex: 1;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.about-image img {
+    width: 100%;
+
+    border-radius: 10px;
+
+    transition: transform 0.5s ease;
+}
+
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+
+.about-text {
+    flex: 1;
+
+    animation: fadeRight 1s ease;
+}
+
+
+.about-text h2 {
+    color: #006d77;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 15px;
+}
+
+
+.gallery img {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+
+    filter: brightness(1.15);
+}
+
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact {
+    background-color: #e8f6f7;
+}
+
+
+.contact-box {
+    max-width: 700px;
+
+    margin: auto;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    animation: fadeUp 1s ease;
+}
+
+
+.contact-box label {
+    display: block;
+
+    margin-top: 15px;
+
+    font-weight: bold;
+}
+
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 5px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    border-color: #006d77;
+
+    box-shadow:
+        0 0 8px rgba(0, 109, 119, 0.2);
+}
+
+
+.contact-box textarea {
+    height: 120px;
+
+    resize: none;
+}
+
+
+.contact-box button {
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    background-color: #006d77;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.contact-box button:hover {
+    background-color: #004f55;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #003f46;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+
+/* Navigation appears from top */
+
+@keyframes slideDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Fade and move upward */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Fade and move downward */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Fade and move from right */
+
+@keyframes fadeRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+/* =====================================
+   MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    nav ul {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .home h1 {
+        font-size: 38px;
+    }
+
+
+    .home p {
+        font-size: 17px;
+    }
+
+
+    .about-container {
+        flex-direction: column;
+    }
+
+}
